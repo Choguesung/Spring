@@ -1,6 +1,9 @@
 package com.apple.shop;
 
 import lombok.RequiredArgsConstructor;
+
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,9 +16,10 @@ public class ItemController {
 
     @GetMapping("/list")
     String list(Model model) {
-        var result = itemRepository.findAll();
-        System.out.print(result.get(0).price);
-        model.addAttribute("name", "홍길동");
+        List<Item> result = itemRepository.findAll();
+        System.out.println(result.get(1).price);
+        model.addAttribute("items", result);
+
         return "list.html";
     }
 }

@@ -4,10 +4,11 @@ import jakarta.persistence.*;
 
 @Entity
 public class Item {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
 
     @Column(nullable = false)
-    String title;
-    Integer price;
+    public String title;
+    public Integer price;
 }
