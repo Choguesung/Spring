@@ -17,7 +17,6 @@ public class ItemController {
     @GetMapping("/list")
     String list(Model model) {
         List<Item> result = itemRepository.findAll();
-        System.out.println(result.get(1).price);
         model.addAttribute("items", result);
 
         return "list.html";
