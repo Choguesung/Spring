@@ -14,7 +14,7 @@ public class ItemController {
     @GetMapping("/list")
     String list(Model model) {
         var result = itemRepository.findAll();
-        System.out.print(result.get(0).price);
+        System.out.print(result.get(0).title);
         model.addAttribute("name", "홍길동");
         return "list.html";
     }

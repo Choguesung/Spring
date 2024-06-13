@@ -12,30 +12,32 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="true" />
+    <show-object-properties value="false" />
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="bab0198f-a010-4c6c-a907-0ae06e4c9acf">
-      <console name="Connection 1" type="STANDARD" schema="shop" session="Main"><![CDATA[select * from item;]]></console>
+    <connection id="60db4fb4-4d9e-4822-b643-54d99c5d398b">
+      <console name="Connection 1" type="STANDARD" schema="" session="Main"><![CDATA[drop database test;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="60db4fb4-4d9e-4822-b643-54d99c5d398b" object-ref="consoles/Connection 1" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="bab0198f-a010-4c6c-a907-0ae06e4c9acf" />
+    <connection id="60db4fb4-4d9e-4822-b643-54d99c5d398b" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="bab0198f-a010-4c6c-a907-0ae06e4c9acf" dataset="mysql.__az_action_history__" active-filter-id="">
-      <filter id="e743abcc-2e88-47a3-92bc-c6e4bcc8c607" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND">
+    <filter-actions connection-id="60db4fb4-4d9e-4822-b643-54d99c5d398b" dataset="mysql.__az_action_history__" active-filter-id="f8bae430-783b-48d7-b4c7-3a6854682f02">
+      <filter id="f8bae430-783b-48d7-b4c7-3a6854682f02" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="ID" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
-    <filter-actions connection-id="bab0198f-a010-4c6c-a907-0ae06e4c9acf" dataset="shop.item" active-filter-id="" />
+    <filter-actions connection-id="60db4fb4-4d9e-4822-b643-54d99c5d398b" dataset="sys.sys_config" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -54,9 +56,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="bab0198f-a010-4c6c-a907-0ae06e4c9acf" active="true" signed="true">
+      <connection id="60db4fb4-4d9e-4822-b643-54d99c5d398b" active="true" signed="true">
         <database>
-          <name value="Connection" />
+          <name value="Connection 1" />
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
@@ -65,7 +67,7 @@
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
-          <host value="coddingapplemysql.mysql.database.azure.com" />
+          <host value="coddingapplemysql1.mysql.database.azure.com" />
           <port value="3306" />
           <database value="mysql" />
           <tns-folder value="" />
@@ -154,6 +156,7 @@
         <display-mode value="TABBED" />
         <navigation-history-size value="100" />
         <show-object-details value="false" />
+        <enable-sticky-paths value="true" />
       </general>
       <filters>
         <object-type-filter>
