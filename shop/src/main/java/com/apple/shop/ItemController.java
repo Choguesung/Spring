@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -37,6 +38,7 @@ public class ItemController {
         return "redirect:/list";
     }
 
+    // 특정 상품에 접근하는 기능임
     @GetMapping("detail/{id}")
     String detail(@PathVariable Long id, Model model){
         Optional<Item> result = itemRepository.findById(id);
