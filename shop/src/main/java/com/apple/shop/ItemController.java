@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class ItemController {
 
     private final ItemRepository itemRepository;
+    private final ItemSevice itemSevice;
 
     @GetMapping("/list")
     String list(Model model) {
@@ -33,7 +34,7 @@ public class ItemController {
     @PostMapping("/add")
     String addPost(@ModelAttribute Item item) {
 
-        itemRepository.save(item);
+        itemSevice.saveItem(item);
 
         return "redirect:/list";
     }
