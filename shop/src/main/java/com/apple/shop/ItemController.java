@@ -32,7 +32,6 @@ public class ItemController {
     @PostMapping("/add")
     String addPost(@ModelAttribute Item item) {
 
-        System.out.println(item);
         itemRepository.save(item);
 
         return "redirect:/list";
