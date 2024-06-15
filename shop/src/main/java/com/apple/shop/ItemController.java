@@ -65,7 +65,7 @@ public class ItemController {
     }
 
     @PostMapping("/edit")
-    String editItem(String title, Integer price, Long id) {
+    String editItem(String title, Integer price,Long id) {
         Item item = new Item();
         item.setId(1L);
         item.setId(id);
