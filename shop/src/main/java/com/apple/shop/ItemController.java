@@ -3,6 +3,8 @@ package com.apple.shop;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 
 import org.springframework.http.ResponseEntity;
@@ -65,9 +67,8 @@ public class ItemController {
     }
 
     @PostMapping("/edit")
-    String editItem(String title, Integer price,Long id) {
+    String editItem(String title, Integer price, Long id) {
         Item item = new Item();
-        item.setId(1L);
         item.setId(id);
         item.setTitle(title);
         item.setPrice(price);
@@ -75,5 +76,14 @@ public class ItemController {
 
         return "redirect:/list";
     }
+
+    @DeleteMapping("/item")
+    ResponseEntity<String> deleteItem(@RequestParam Long id){
+
+        itemRepository.deleteById(id);
+
+        return ResponseEntity.status(200).body("삭제완료");
+    }
+
 
 }
