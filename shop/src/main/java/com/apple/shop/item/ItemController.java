@@ -1,10 +1,8 @@
-package com.apple.shop;
+package com.apple.shop.item;
 
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 
 import org.springframework.http.ResponseEntity;
